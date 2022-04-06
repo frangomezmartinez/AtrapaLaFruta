@@ -17,5 +17,22 @@ public abstract class Elemento {
 		this.imagen=imagen;
 		this.simbolo=simbolo;
 	}
-	
+	public char getSimbolo() {
+		return simbolo;
+	}
+	public void setSimbolo(char simbolo) {
+		this.simbolo=simbolo;
+	}
+	public int getPosicionX() {
+		return posicionX;
+	}
+	public int getPosicionY() {
+		return posicionY;
+	}
+	public void setPosicionX(int posicionX) {
+		this.posicionX=posicionX;
+	}
+	public void setPosicionY(int posicionY) {
+		this.posicionY=posicionY;
+	}
 }
