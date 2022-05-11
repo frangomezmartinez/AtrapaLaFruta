@@ -1,5 +1,5 @@
 package AlF;
 
-public class FrutaMagica {
+public class FrutaMagica extends Fruta {
 
 }
