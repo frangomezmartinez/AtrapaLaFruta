@@ -9,6 +9,7 @@ public class Escenario {
 	private int conTEfecto=0;
 	private int contSaltar=0;
 	
+	//Constructor
 	public Escenario(int ancho, int alto) {
 		this.ancho=ancho;
 		this.alto=alto;
@@ -28,12 +29,12 @@ public class Escenario {
 	public void setElementos(ArrayList<Elemento> elementos) {
 		this.elementos=elementos;
 	}
-	
+	//Método para agregar personaje
 	public void agregarPersonaje(int posicionX,int posicionY, int alto, int ancho,int velocidad) {
 		this.personaje = new Personaje(posicionX, posicionY, alto, ancho, velocidad);
 		elementos.add(personaje);
 	}
-	
+	//Método para agregar fruta
 	public void agregarFruta(int posicionX, int posicionY,int alto, int ancho, String imagen, char simbolo) {
 		Fruta a = new Fruta(posicionX, posicionY, alto, ancho, imagen, simbolo);
 		switch(simbolo) {
@@ -56,7 +57,7 @@ public class Escenario {
 		elementos.add(a);
 	}
 	
-	
+	//Metodos para agregar los distintos escenarios
 		public void crearEscenario1() {
 			this.agregarPersonaje(1, 1, 10, 10, 2);
 			this.agregarFruta(21, 1, 1, 1, "D", 'D');

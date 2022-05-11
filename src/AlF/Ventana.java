@@ -8,10 +8,11 @@ public class Ventana {
 	private final int alto = 80;
 	private boolean mover = false;
 	
+	//Constructor
 	public Ventana() {
 		this.escenario = new Escenario(alto, ancho);
 	}
-	
+	// Métodos get
 	public int getAlto() {
 		return alto;
 	}
@@ -19,6 +20,7 @@ public class Ventana {
 		return ancho;
 	}
 	
+	//Metodo que muestra en pantalla los escenarios a elegir
 public void mostrarMenu() {
 		
 		Scanner scanner = new Scanner(System.in);

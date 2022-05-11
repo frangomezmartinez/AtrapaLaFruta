@@ -14,7 +14,7 @@ public class FrutaMagica extends Fruta {
 	public FrutaMagica(int posicionX, int posicionY, int alto, int ancho, String imagen, char simbolo) {
 		super(posicionX, posicionY, alto, ancho, imagen, simbolo);
 		
-	
+	// Metodo para definir el efecto de cada  FrutaMagica
 		switch(simbolo) {
 		case 'G':
 			this.nombre="Dorada";
@@ -37,7 +37,7 @@ public class FrutaMagica extends Fruta {
 		}
 	}
 	
-	
+	//Metodos get y el set para los efectos
 	public String getNombre() {
 		return nombre;
 	}

@@ -9,6 +9,7 @@ public class Personaje extends Elemento {
 	protected int contadorsaltar;
 	protected ArrayList<Fruta> Fruta;
 	
+	//Constructor
 	public Personaje(int posicionX,int posicionY, int alto, int ancho, int velocidad) {
 		super(posicionX, posicionY, ancho, alto, "O", 'O');
 		this.Fruta= new ArrayList<Fruta>();

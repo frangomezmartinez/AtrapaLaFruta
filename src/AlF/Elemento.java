@@ -8,6 +8,7 @@ public abstract class Elemento {
 	protected String imagen;
 	protected char simbolo;
 	
+	// Constructor
 	public Elemento (int posicionX, int posicionY, int ancho, int alto, String imagen, char simbolo) {
 		super();
 		this.posicionX=posicionX;
@@ -17,6 +18,8 @@ public abstract class Elemento {
 		this.imagen=imagen;
 		this.simbolo=simbolo;
 	}
+	
+	// Métodos get y set
 	public char getSimbolo() {
 		return simbolo;
 	}
