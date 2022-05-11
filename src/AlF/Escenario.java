@@ -4,8 +4,82 @@ public class Escenario {
 	
 	protected int ancho;
 	protected int alto;
-	protected personaje personaje;
+	protected Personaje personaje;
 	protected ArrayList<Elemento> elementos;
 	private int conTEfecto=0;
 	private int contSaltar=0;
+	
+	public Escenario(int ancho, int alto) {
+		this.ancho=ancho;
+		this.alto=alto;
+		this.elementos= new ArrayList<Elemento>();
+	}
+	
+	public int getAlto() {
+		return alto;
+	}
+	public int getAncho() {
+		return ancho;
+	}
+	public ArrayList <Elemento> getElementos() {
+		return elementos;	
+	}
+	
+	public void setElementos(ArrayList<Elemento> elementos) {
+		this.elementos=elementos;
+	}
+	
+	public void agregarPersonaje(int posicionX,int posicionY, int alto, int ancho,int velocidad) {
+		this.personaje = new Personaje(posicionX, posicionY, alto, ancho, velocidad);
+		elementos.add(personaje);
+	}
+	
+	public void agregarFruta(int posicionX, int posicionY,int alto, int ancho, String imagen, char simbolo) {
+		Fruta a = new Fruta(posicionX, posicionY, alto, ancho, imagen, simbolo);
+		switch(simbolo) {
+		case 'D':
+			a.agregarFrutaDorada(posicionX, posicionY);
+			break;
+		case 'G':
+			a.agregarFrutaDragon(posicionX, posicionY);
+			break;
+		case 'P':
+			a.agregarFrutaPlateada(posicionX, posicionY);
+			break;
+		case 'H':
+			a.agregarFrutaHarryPotter(posicionX, posicionY);
+			break;
+		case 'V':
+			a.agregarFrutaVenenosa(posicionX, posicionY);
+			break;
+		}
+		elementos.add(a);
+	}
+	
+	
+		public void crearEscenario1() {
+			this.agregarPersonaje(1, 1, 10, 10, 2);
+			this.agregarFruta(21, 1, 1, 1, "D", 'D');
+			this.agregarFruta(43, 1, 1, 1, "P", 'P');
+		}
+		
+		public void crearEscenario2() {
+			this.agregarPersonaje(1, 1, 10, 10, 2);
+			this.agregarFruta(13, 1, 1, 1, "V", 'V');
+			this.agregarFruta(53, 1, 1, 1, "G", 'G');
+			
+		}	
+		
+			public void crearEscenario3() {
+				this.agregarPersonaje(1, 1, 10, 10, 2);
+				this.agregarFruta(13, 1, 1, 1, "H", 'H');			
+
+			}
+		
+			public void crearEscenario4() {
+				this.agregarPersonaje(1, 1, 10, 10, 2);
+				this.agregarFruta(21, 3, 1, 1, "D", 'D');
+				this.agregarFruta(43, 3, 1, 1, "P", 'P');
+				
+			}
 }
