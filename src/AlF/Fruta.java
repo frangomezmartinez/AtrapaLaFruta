@@ -1,13 +1,19 @@
 package AlF;
 
 public class Fruta extends Elemento {
+	protected int posicionX;
+	protected int posicionY;
+	protected int alto;
+	protected int ancho;
+	protected String imagen;
+	protected char simbolo;
+	private String nombre;
+	private int puntos;
 	
-	protected String nombre;
-	protected int puntos;
-	
+	//Constructor
 	public Fruta(int posicionX, int posicionY, int alto, int ancho, String imagen, char simbolo) {
 		super(posicionX, posicionY, alto, ancho, imagen, simbolo);
-		
+		//dependiendo de la fruta
 		switch(simbolo) {
 		case 'D':
 			this.nombre="Dragón";
@@ -44,7 +50,7 @@ public class Fruta extends Elemento {
 	public int getPuntos() {
 		return puntos;
 	}
-	
+	//metodods para agregar las diferentes frutas
 	public void agregarFrutaDragon(int posicionX, int posicionY) {
 		this.posicionX=posicionX;
 		this.posicionY=posicionY;

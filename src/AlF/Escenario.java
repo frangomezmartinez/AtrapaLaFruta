@@ -6,8 +6,7 @@ public class Escenario {
 	protected int alto;
 	protected Personaje personaje;
 	protected ArrayList<Elemento> elementos;
-	private int conTEfecto=0;
-	private int contSaltar=0;
+	
 	
 	//Constructor
 	public Escenario(int ancho, int alto) {
@@ -82,5 +81,21 @@ public class Escenario {
 				this.agregarFruta(21, 3, 1, 1, "D", 'D');
 				this.agregarFruta(43, 3, 1, 1, "P", 'P');
 				
+			}
+			//Metodo para que salte el personaje
+			public void saltarPersonaje() {
+				this.personaje.saltar();
+			}
+			
+			public boolean jugando() {
+				ArrayList<Elemento> el = new ArrayList<Elemento>();
+				el = this.getElementos();
+				for(int i = 0; i<el.size(); i++) {
+					if(i > 0) {
+						Elemento e = this.elementos.get(i);
+						this.personaje.choca(e);
+					}
+				}
+				return true;
 			}
 }

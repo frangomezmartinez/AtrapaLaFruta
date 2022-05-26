@@ -38,4 +38,28 @@ public abstract class Elemento {
 	public void setPosicionY(int posicionY) {
 		this.posicionY=posicionY;
 	}
+	
+	public int getAlto() {
+		return alto;
+	}
+	public void setAlto(int alto) {
+		this.alto=alto;
+	}
+	public int getAncho() {
+		return ancho;
+	}
+	
+	public void setAncho(int ancho) {
+		this.ancho=ancho;
+	}
+	
+	public String getImagen() {
+		return imagen;
+	}
+	public void setImagen(String imagen) {
+		this.imagen=imagen;
+	}
+	//Metodo para mostrar los datos del elemento
+	public abstract void mostrarDatos();
+	
 }
