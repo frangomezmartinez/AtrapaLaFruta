@@ -65,10 +65,14 @@ public class Escenario {
 		public void crearEscenario2() {
 			this.agregarPersonaje(1, 1, 10, 10, 2);
 			this.agregarFruta(13, 1, 1, 1, "V", 'V');
-			this.agregarFruta(53, 1, 1, 1, "G", 'G');
-			
+			this.agregarFruta(53, 1, 1, 1, "G", 'G');		
 		}
-		
+		public void crearEscenario3() {
+			this.agregarPersonaje(1, 1, 10, 10, 2);
+			this.agregarFruta(13, 1, 1, 1, "H", 'H');
+			
+
+		}
 				
 			
 			//Metodo para que salte el personaje
