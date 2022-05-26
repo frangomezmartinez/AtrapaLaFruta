@@ -62,7 +62,12 @@ public class Escenario {
 			this.agregarFruta(21, 1, 1, 1, "D", 'D');
 			this.agregarFruta(43, 1, 1, 1, "P", 'P');
 		}
-		
+		public void crearEscenario2() {
+			this.agregarPersonaje(1, 1, 10, 10, 2);
+			this.agregarFruta(13, 1, 1, 1, "V", 'V');
+			this.agregarFruta(53, 1, 1, 1, "G", 'G');
+			
+		}
 		
 				
 			
